@@ -11,7 +11,7 @@ export const titleCaseDir = (dir) => {
 export const targetLinkRemove = (string) => {
   let targetLinkRegEx = /{target=_blank}/
   if (string.match(targetLinkRegEx)) {
-    let stringAltered = string.slice[0,(len(string)-15)]
+    let stringAltered = string.slice(0,(string.length-15))
     return stringAltered
   }
   return string

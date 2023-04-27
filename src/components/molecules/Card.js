@@ -24,7 +24,7 @@ const Card = ({ path, data }) => {
     <Wrap>
       <img src={data?.image} />
       <h3>
-        <Link to={path}>{data?.title}</Link>
+        <Link to={path || '#'}>{data?.title}</Link>
       </h3>
     </Wrap>
   )
