@@ -1,0 +1,34 @@
+name: Metamask.io Website Change Request
+description: Metamask.io Website Website Change Request
+#title: "[]: "
+#labels: [""]
+assignees: ["cuonglt-ync", "jlazoff", "BXChoppedCheese", "Abdelch89", "nkkurt"]
+body:
+ - type: markdown
+   attributes:
+     value: |
+       Thanks for taking the time to fill out this change request!
+    
+ - type: dropdown
+   id: ticket-type
+   attributes:
+     label: Ticket Type
+     description: How can we help you?
+     options:
+       - Bug / Hotfix
+       - Content Change
+       - Feature Request
+       - Other
+ - type: textarea
+   id: what-happened
+   attributes:
+     label: Description
+     description:  Please include screenshots/examples if applicable!
+     placeholder: Tell us how we can help you!
+ - type: textarea
+   id: reproduce
+   attributes:
+     label: Steps to reproduce
+     description: List all steps needed to reproduce 
+     value: |
+       1.
