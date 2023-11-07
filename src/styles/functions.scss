@@ -1,0 +1,39 @@
+@use 'sass:math';
+
+$breakpoints: (
+  'mobile': 479px,
+  'tablet': 767px,
+  'desktop': 1023px,
+);
+
+@mixin breakpoint($width: '', $type: 'up') {
+  @if map-has-key($breakpoints, '#{$width}') {
+    @if $type =='down' {
+      @media only screen and (max-width: map-get($breakpoints, '#{$width}')) {
+        @content;
+      }
+    }
+
+    @else {
+      @media only screen and (min-width: map-get($breakpoints, '#{$width}')) {
+        @content;
+      }
+    }
+  }
+
+  @else {
+    @warn 'Breakpoint: width and height not found.';
+  }
+}
+
+@mixin breakpoint-max($width: '') {
+  @if map-has-key($breakpoints, '#{$width}') {
+    @media only screen and (max-width: map-get($breakpoints, '#{$width}')) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn 'Breakpoint: width and height not found.';
+  }
+}
