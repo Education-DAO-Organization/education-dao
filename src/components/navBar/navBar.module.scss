@@ -1,12 +1,12 @@
 .container {
   position: fixed;
-  top: 4rem;
+  top: 2rem;
   width: calc(100% - 3rem);
   max-width: calc(var(--max-width) - 3rem);
 }
 
 .headerPlaceholder {
-  height: 13.5rem;
+  height: 11.5rem;
 }
 
 .wrapper {
@@ -33,7 +33,6 @@
   justify-content: space-between;
   align-items: center;
   column-gap: 2rem;
-  border-radius: 2rem;
   padding: 0.75rem 1rem;
 
   .imageWrapper {
@@ -49,6 +48,7 @@
     align-items: center;
     column-gap: 2.5rem;
   }
+
   .toggleIcon {
     background: none;
     cursor: pointer;
@@ -85,6 +85,7 @@
       display: flex;
       align-items: center;
       column-gap: 0.5rem;
+
       &:hover {
         text-decoration-line: underline;
         text-underline-offset: 4px;
@@ -103,6 +104,7 @@
   inset: 0;
   background-color: var(--color-dark);
   width: 100%;
+
   .menuList {
     flex-direction: column;
     align-items: center;
@@ -114,24 +116,31 @@
   }
 }
 
-@include breakpoint('tablet') {
-  .wrapper {
-    border-radius: 9999px;
+@include breakpoint("tablet") {
+  .container {
+    top: 4rem;
   }
+
+  .wrapper {
+    border-radius: 2rem;
+  }
+
   .innerWrapper {
     .right {
       display: flex;
     }
+
     .toggleIcon {
       display: none;
     }
   }
+
   .menuOverlay {
     display: none !important;
   }
 }
 
-@include breakpoint('desktop') {
+@include breakpoint("desktop") {
   .innerWrapper {
     padding: 1.5rem 2rem;
 
@@ -140,13 +149,16 @@
         width: 4rem;
       }
     }
+
     .right {
       column-gap: 4rem;
     }
   }
+
   .menuList {
     column-gap: 4rem;
   }
+
   .headerPlaceholder {
     height: 15rem;
   }
