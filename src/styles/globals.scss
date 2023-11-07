@@ -1,0 +1,51 @@
+:root {
+  --max-width: 82rem;
+  --color-white: #fff;
+  --color-black: #121212;
+  --color-dark: #1a1a1a;
+  --color-purple: #A798EF;
+  --color-dark-purple: #867abf;
+}
+
+* {
+  box-sizing: border-box;
+  font: inherit;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  max-width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: fraktionSansFont;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+@include breakpoint('tablet') {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@include breakpoint('desktop') {
+  h1 {
+    font-size: 4.75rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+}

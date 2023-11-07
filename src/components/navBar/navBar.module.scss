@@ -1,0 +1,153 @@
+.container {
+  position: fixed;
+  top: 4rem;
+  width: calc(100% - 3rem);
+  max-width: calc(var(--max-width) - 3rem);
+}
+
+.headerPlaceholder {
+  height: 13.5rem;
+}
+
+.wrapper {
+  border-radius: 1rem;
+  position: relative;
+  z-index: 2;
+  background-color: var(--color-dark);
+}
+
+.connectWallet {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  background-color: #292929;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  color: var(--color-white);
+  cursor: not-allowed;
+  border-radius: 9999px;
+}
+
+.innerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+  border-radius: 2rem;
+  padding: 0.75rem 1rem;
+
+  .imageWrapper {
+    img {
+      width: 2rem;
+      aspect-ratio: 1 / 1;
+      display: block;
+    }
+  }
+
+  .right {
+    display: none;
+    align-items: center;
+    column-gap: 2.5rem;
+  }
+  .toggleIcon {
+    background: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    div {
+      border-radius: 3rem;
+      width: 1.5rem;
+      height: 0.1875rem;
+      margin: 0.3125rem;
+      background-color: var(--color-white);
+      transition: width 0.4s ease-in-out;
+    }
+
+    &.open {
+      div:nth-child(2) {
+        width: 40%;
+      }
+    }
+  }
+}
+
+.menuList {
+  display: flex;
+  column-gap: 2.5rem;
+  list-style-type: none;
+
+  li {
+    a {
+      text-decoration: none;
+      color: var(--color-white);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+      &:hover {
+        text-decoration-line: underline;
+        text-underline-offset: 4px;
+      }
+    }
+  }
+}
+
+.menuOverlay {
+  display: none;
+  flex-direction: column;
+  row-gap: 2rem;
+  align-items: center;
+  position: fixed;
+  padding-top: 10rem;
+  inset: 0;
+  background-color: var(--color-dark);
+  width: 100%;
+  .menuList {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+  }
+
+  &.open {
+    display: flex;
+  }
+}
+
+@include breakpoint('tablet') {
+  .wrapper {
+    border-radius: 9999px;
+  }
+  .innerWrapper {
+    .right {
+      display: flex;
+    }
+    .toggleIcon {
+      display: none;
+    }
+  }
+  .menuOverlay {
+    display: none !important;
+  }
+}
+
+@include breakpoint('desktop') {
+  .innerWrapper {
+    padding: 1.5rem 2rem;
+
+    .imageWrapper {
+      img {
+        width: 4rem;
+      }
+    }
+    .right {
+      column-gap: 4rem;
+    }
+  }
+  .menuList {
+    column-gap: 4rem;
+  }
+  .headerPlaceholder {
+    height: 15rem;
+  }
+}
