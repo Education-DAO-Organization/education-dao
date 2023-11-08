@@ -16,18 +16,6 @@
   background-color: var(--color-dark);
 }
 
-.connectWallet {
-  display: flex;
-  column-gap: 1rem;
-  align-items: center;
-  background-color: #292929;
-  padding: 1rem 1.5rem;
-  font-weight: 600;
-  color: var(--color-white);
-  cursor: not-allowed;
-  border-radius: 9999px;
-}
-
 .innerWrapper {
   display: flex;
   justify-content: space-between;
