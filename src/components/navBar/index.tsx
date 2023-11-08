@@ -8,7 +8,6 @@ import Link from "next/link";
 import Logo from "@/assets/icons/logo.svg";
 import DiscordLogo from "@/assets/icons/discord-logo.svg";
 import TwitterLogo from "@/assets/icons/twitter-logo.svg";
-import MetaMaskLogo from "@/assets/icons/metamask-fox-logo.svg";
 
 type MenuItemProps = {
   items: {
@@ -21,29 +20,18 @@ type MenuItemProps = {
 
 function Menu({ items }: MenuItemProps) {
   return (
-    <>
-      <ul className={styles.menuList}>
-        {items.map((item, index) => (
-          <li key={index}>
-            <a href={item.url} target={item.newTab ? "_blank" : "_self"}>
-              {item.icon && (
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={24}
-                  height={24}
-                />
-              )}
-              {item.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-      <div className={styles.connectWallet}>
-        <Image src={MetaMaskLogo} alt="MetaMask Fox" width={24} height={22} />
-        <span>Connect with MetaMask</span>
-      </div>
-    </>
+    <ul className={styles.menuList}>
+      {items.map((item, index) => (
+        <li key={index}>
+          <a href={item.url} target={item.newTab ? "_blank" : "_self"}>
+            {item.icon && (
+              <Image src={item.icon} alt={item.title} width={24} height={24} />
+            )}
+            {item.title}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -69,13 +57,13 @@ function NavBar() {
     },
     {
       title: "Discord",
-      url: "#",
+      url: "https://join.education-dao.org/",
       newTab: true,
       icon: DiscordLogo,
     },
     {
       title: "Twitter",
-      url: "#",
+      url: "https://x.com/education__dao?s=21&t=8zlqkbSsAV4jfojavm-J7A",
       newTab: true,
       icon: TwitterLogo,
     },
