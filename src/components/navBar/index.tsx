@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import styles from "./navBar.module.scss";
 import Link from "next/link";
@@ -19,16 +20,21 @@ type MenuItemProps = {
 };
 
 function Menu({ items }: MenuItemProps) {
+  const pathname = usePathname();
+
   return (
     <ul className={styles.menuList}>
       {items.map((item, index) => (
-        <li key={index}>
-          <a href={item.url} target={item.newTab ? "_blank" : "_self"}>
+        <li
+          key={index}
+          className={clsx({ [styles.active]: pathname === item.url })}
+        >
+          <Link href={item.url} target={item.newTab ? "_blank" : "_self"}>
             {item.icon && (
               <Image src={item.icon} alt={item.title} width={24} height={24} />
             )}
             {item.title}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
@@ -52,8 +58,8 @@ function NavBar() {
   const navItems = [
     {
       title: "About",
-      url: "#",
-      newTab: true,
+      url: "/about",
+      newTab: false,
     },
     {
       title: "Discord",
