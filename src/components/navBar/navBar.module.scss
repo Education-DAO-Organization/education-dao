@@ -80,6 +80,11 @@
       }
     }
   }
+
+  li.active a {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+  }
 }
 
 .menuOverlay {
