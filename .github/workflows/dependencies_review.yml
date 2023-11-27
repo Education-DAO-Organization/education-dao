@@ -1,5 +1,8 @@
 name: "Dependency Review"
-on: [pull_request]
+on:
+  workflow_dispatch:
+  # Disable this workflow since dependency review is not supported on this repository.
+  # pull_request:
 
 permissions:
   contents: read
