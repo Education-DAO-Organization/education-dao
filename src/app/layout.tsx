@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { GoogleTagManager } from 'react-gtm-module';
-import type { Metadata } from "next";
 import fraktionSansFont from "@/fonts/fraktionSans";
 import styles from "./layout.module.scss";
 import "@/styles/globals.scss";
