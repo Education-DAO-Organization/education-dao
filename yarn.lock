@@ -144,6 +144,11 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-gtm-module@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/@types/react-gtm-module/-/react-gtm-module-2.0.3.tgz"
+  integrity sha512-fL2zKdDFN5LckSsVBXEhhm9M4tFTM9oHJfGcfZJzktQkzpOTGtDM8oXIP9d9UBDxO4xLNZhS22dlgRVv6wgK9w==
+
 "@types/react@*", "@types/react@^18":
   version "18.2.34"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.2.34.tgz"
