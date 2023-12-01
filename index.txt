@@ -2,7 +2,7 @@
 2:HL["/education-dao/_next/static/media/8fbbe12f7cb3cb60-s.p.woff","font",{"crossOrigin":"","type":"font/woff"}]
 3:HL["/education-dao/_next/static/media/d1264e491614c6a5-s.p.otf","font",{"crossOrigin":"","type":"font/otf"}]
 4:HL["/education-dao/_next/static/css/1e007e80c5687ba4.css","style",{"crossOrigin":""}]
-0:["rktnHtO0DxzCdfQel2Nom",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L5",[[["$","link","0",{"rel":"stylesheet","href":"/education-dao/_next/static/css/1e007e80c5687ba4.css","precedence":"next","crossOrigin":""}]],"$L6"]]]]
+0:["U81rNkAmkeLwCUOVZh-1P",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L5",[[["$","link","0",{"rel":"stylesheet","href":"/education-dao/_next/static/css/1e007e80c5687ba4.css","precedence":"next","crossOrigin":""}]],"$L6"]]]]
 7:HL["/education-dao/_next/static/css/3f609c6c30a3f80e.css","style",{"crossOrigin":""}]
 8:I[6954,[],""]
 9:I[7264,[],""]
