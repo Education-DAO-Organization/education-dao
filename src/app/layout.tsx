@@ -17,8 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
+        <title>{metadata.title || "Education DAO"}</title>
+        <meta name="description" content={metadata.description || "Education DAO"} />
         <script dangerouslySetInnerHTML={{
           __html: `
             (function(w,d,s,l,i){
