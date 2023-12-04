@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Consensys Education DAO will coming soon!",
 };
 
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+const GTM_ID = "GTM-567GV6F";
 
 export default function RootLayout({
   children,
