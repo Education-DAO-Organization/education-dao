@@ -8,6 +8,7 @@ const nextConfig = {
   sassOptions: {
     prependData: `@import "src/styles/functions.scss";`,
   },
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;
