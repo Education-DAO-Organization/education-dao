@@ -18,6 +18,7 @@ jobs:
         run: |
           touch .env
           echo BASE_PATH=${{ vars.BASE_PATH }} >> .env
+          echo NEXT_PUBLIC_GTM_ID=${{ secrets.NEXT_PUBLIC_GTM_ID }} >> .env
 
       - name: Install and Build 🔧
         uses: actions/setup-node@v3
